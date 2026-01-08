@@ -1,4 +1,9 @@
 {
   "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/build"
+  "outputDirectory": "frontend/build",
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.11"
+    }
+  }
 }

@@ -7,5 +7,4 @@ pypdf==5.1.0
 langchain-text-splitters==0.3.11
 sentence-transformers==3.3.1
 huggingface-hub==0.36.0
-numpy>=1.21.0,<2.0.0
 
