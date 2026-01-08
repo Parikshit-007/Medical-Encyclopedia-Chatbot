@@ -2,16 +2,10 @@
   "version": 2,
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/build",
-  "builds": [
-    {
-      "src": "api/**/*.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1.py"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
@@ -20,10 +14,8 @@
   ],
   "functions": {
     "api/**/*.py": {
+      "runtime": "python3.10",
       "maxDuration": 30
     }
-  },
-  "env": {
-    "PYTHON_VERSION": "3.10"
   }
 }
